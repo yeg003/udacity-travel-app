@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Travel Buddy</title>
+    </head>
+
+    <body>
+
+          <!-- NavBar -->
+        <header>
+            <div class="logo">
+                <a href="index.html" class="logo"><span style="color: #ff494a;">T</span>B</a>
+                <a href="index.html" class="logo"><span style="color: #ff494a;">T</span>B</a>
+            </div>
+            <div class="nav-links">
+                 <a href="#form-section">Go Somewhere</a>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-wrapper">
+                <h1><span style="color: #ff494a;">Travel</span> Buddy</h1>
+                <h3>Go Somewhere New</h3>
+                <p>Travel Buddy lets you plan you next trip, simply enter your place of origin, your destination and your trip date.</p>
+                <a href="#form-section" class="go-somewhere-btn">Go Somewhere New +</a>
+            </div>
+        </section>
+
+        <!-- Input Section -->
+        <section id="form-section">
+            <div class="form-container">
+                <div class="form">
+                    <form>
+                     <h1>Enter Trip Information</h1>
+                    <input type="text" placeholder="Place of Origin" name= "origin" required>
+                    <input type="text" placeholder="Destination" name="destination" required>
+                    <label for="date">Departing on:</label>
+                    <input type="date" name="date">
+                    <input type="submit"  class="input-btn" name="submit" value="Submit">
+                    </form>
+                </div>        
+            </div>
+        </section>
+    <!-- Result Section -->
+    <section id="result-section" class="hidden">
+        <div class="result-container">
+            <div class="result-left">
+                <img id="destination-img"src="#" alt="destination-img">
+            </div>
+            <div class="result-right">
+                <h2 class="destination-text" >
+                    Destination:
+                    <span id="city" class="result-underline">New York</span>
+                </h2>
+                <h2 class="destination-date">
+                    Departing on:
+                    <span id="date" class="result-underline">DD/MM/YYYY</span>
+                </h2>
+                <h2 class="destination-countdown">This trip is 
+                    <span id="days-left" class="result-underline">32</span>
+                    days away
+                </h2>
+                <h2 class="local-weather">Local weather is:
+                    <span id="destination-weather" class="result-underline">54</span>
+                    &#176; F
+                </h2>
+                <div class="result-btn-container">
+                    <a id="delete-btn" href="#">Delete</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <footer>
+            <p>Travel Buddy,</p>
+            <p>All rights reserved ©</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+              // Use the window load event to keep the page load performant
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+              });
+            }
+          </script>
+        
+
+
+    </body>
+</html>
