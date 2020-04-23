@@ -27,7 +27,7 @@ node and npm should be installed on your local machine to be able to build and r
 
  # Development
 
- To start the webpack dev server at port 8080
+ To start the webpack dev server at port 3000
 
 $ npm run build-dev
 
