@@ -46,7 +46,6 @@ export function goSomewhereFunc(e){
         const cityLong = cityData.geonames[0].lng;
         const country = cityData.geonames[0].countryName;
         const weatherData = getWeather(cityLat, cityLong, country, timestamp)
-        console.log(cityData)
         return weatherData;
         
     }) 
